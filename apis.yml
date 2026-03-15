@@ -1,0 +1,14 @@
+name: OpenTofu
+description: Open-source infrastructure as code tool forked from Terraform, providing
+  a community-driven alternative for provisioning and managing cloud infrastructure
+  using declarative configuration files.
+url: https://opentofu.org/
+tags:
+- Infrastructure As Code
+- DevOps
+- Cloud
+- Open Source
+created: '2025'
+modified: '2025'
+apis: []
+common: []
