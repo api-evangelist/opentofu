@@ -1,14 +1,52 @@
+aid: opentofu
 name: OpenTofu
-description: Open-source infrastructure as code tool forked from Terraform, providing
-  a community-driven alternative for provisioning and managing cloud infrastructure
-  using declarative configuration files.
-url: https://opentofu.org/
+description: >-
+  Open-source infrastructure as code tool forked from Terraform, providing
+  a community-driven alternative for provisioning and managing cloud
+  infrastructure using declarative configuration files.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Infrastructure As Code
-- DevOps
-- Cloud
-- Open Source
-created: '2025'
-modified: '2025'
-apis: []
-common: []
+  - Infrastructure As Code
+  - DevOps
+  - Cloud
+  - Open Source
+created: '2025-01-01'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/opentofu/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: opentofu:opentofu
+    name: OpenTofu
+    description: >-
+      Open-source infrastructure as code tool forked from Terraform, providing
+      a community-driven alternative for provisioning and managing cloud
+      infrastructure using declarative configuration files.
+    humanURL: https://opentofu.org/
+    tags:
+      - Infrastructure As Code
+      - DevOps
+      - Cloud
+      - Open Source
+    properties:
+      - type: Documentation
+        url: https://opentofu.org/docs/
+common:
+  - url: https://opentofu.org/
+    name: OpenTofu
+    type: Website
+    description: 'null'
+  - url: https://opentofu.org/docs/
+    name: Documentation
+    type: Portal
+    description: 'null'
+  - url: https://github.com/opentofu/opentofu
+    name: GitHub Repository
+    type: GitHubRepository
+    description: 'null'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
