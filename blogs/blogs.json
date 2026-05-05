@@ -1,0 +1,13 @@
+{
+  "repo": "opentofu",
+  "feeds": [
+    {
+      "source": "https://opentofu.org/blog/",
+      "feed_url": "https://opentofu.org/blog/rss.xml",
+      "saved": 10,
+      "title": "OpenTofu Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:33:03Z"
+}

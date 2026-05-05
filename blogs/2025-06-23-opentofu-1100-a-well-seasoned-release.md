@@ -1,0 +1,41 @@
+---
+title: "OpenTofu 1.10.0: A Well-Seasoned Release"
+url: "https://opentofu.org/blog/opentofu-1-10-0"
+date: "Mon, 23 Jun 2025 00:00:00 GMT"
+author: ""
+feed_url: "https://opentofu.org/blog/rss.xml"
+---
+<p>We're thrilled to announce the release of OpenTofu 1.10.0, our most comprehensive update yet! This release represents months of dedicated work from our community, introducing some fantastic features that will improve how OpenTofu users manage and distribute infrastructure as code.</p>
+<p>From OCI registry support that revolutionizes provider and module distribution, to adding support for deprecation attributes that helps module authors gracefully evolve their APIs, OpenTofu 1.10.0 is packed with enhancements that address real-world challenges faced by teams at scale. We're incredibly grateful to everyone who tested our alpha and beta releases, provided feedback, and contributed code – your input has been invaluable in shaping this release.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-perfect-10-celebrating-10-million-downloads">The Perfect 10: Celebrating 10 Million Downloads<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#the-perfect-10-celebrating-10-million-downloads" title="Direct link to The Perfect 10: Celebrating 10 Million Downloads">​</a></h2>
+<p>As we release OpenTofu 1.10.0, we're thrilled to announce that we're about to cross an incredible milestone: <strong>10 million downloads</strong> from GitHub releases alone! Currently at 9.8 million downloads, we're on track to hit this landmark within days. This doesn't even include installations from Homebrew, package managers, Docker Hub, or corporate mirrors – the true number is likely already well past 20 million.</p>
+<p>Perhaps most impressively, our community's trust is evident in adoption velocity. If we look at the GitHub release downloads, when we released v1.9.1, it overtook v1.9.0 in just <strong>7 days</strong> – the fastest patch adoption we've ever seen. Currently, 63% of the total downloads daily are for the latest v1.9.x series.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="major-features-overview">Major Features Overview<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#major-features-overview" title="Direct link to Major Features Overview">​</a></h2>
+<p>OpenTofu 1.10.0 is packed with powerful new capabilities that address real-world infrastructure challenges. Here are the highlights:</p>
+<ul>
+<li><strong>OCI Registry Support</strong> - Distribute providers and modules through container registries, perfect for air-gapped environments</li>
+<li><strong>Native S3 State Locking</strong> - Simplified state management without requiring DynamoDB</li>
+<li><strong>Deprecation Support</strong> - Module authors can now mark variables and outputs as deprecated</li>
+<li><strong>Enhanced Planning</strong> - New <code>-target-file</code> and <code>-exclude-file</code> options for better resource management</li>
+<li><strong>Global Provider Cache Lock</strong> - Safe concurrent operations in CI/CD environments</li>
+<li><strong>OpenTelemetry Tracing</strong> - Local-only observability for debugging and performance analysis</li>
+<li><strong>External Key Providers</strong> - Flexible state encryption with your preferred secret management tools</li>
+<li><strong>Enhanced moved and removed blocks</strong> - More powerful infrastructure refactoring capabilities</li>
+</ul>
+<p>You can find detailed information about all these features and more on our comprehensive <a href="https://opentofu.org/docs/intro/whats-new/">What's new in OpenTofu 1.10?</a> page.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ecosystem-maturity">Ecosystem Maturity<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#ecosystem-maturity" title="Direct link to Ecosystem Maturity">​</a></h2>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="official-vs-code-extension">Official VS Code Extension<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#official-vs-code-extension" title="Direct link to Official VS Code Extension">​</a></h3>
+<p>The OpenTofu ecosystem continues to flourish with professional tooling. Our official VS Code extension (currently in preview) provides a first-class development experience with syntax highlighting, IntelliSense autocompletion, real-time validation, and integrated documentation. Whether you're writing modules or managing complex infrastructure, the extension helps catch errors early and speeds up development with smart suggestions for resources, data sources, and built-in functions.</p>
+<p>Available on <a href="https://marketplace.visualstudio.com/items?itemName=OpenTofu.vscode-opentofu" rel="noopener noreferrer" target="_blank">VS Code Marketplace</a> and <a href="https://open-vsx.org/extension/OpenTofu/vscode-opentofu" rel="noopener noreferrer" target="_blank">Open VSX Registry</a></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="language-server-protocol-support">Language Server Protocol Support<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#language-server-protocol-support" title="Direct link to Language Server Protocol Support">​</a></h3>
+<p>Not a VS Code user? You can get the same powerful features in your preferred editor with <a href="https://github.com/opentofu/tofu-ls" rel="noopener noreferrer" target="_blank">tofu-ls</a>, our Language Server Protocol implementation. This brings OpenTofu intelligence to any LSP-compatible editor including Neovim, Emacs, Sublime Text, and more. Get autocompletion, diagnostics, and documentation lookup wherever you write your infrastructure code.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="opentofu-registry-mcp-server">OpenTofu Registry MCP Server<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#opentofu-registry-mcp-server" title="Direct link to OpenTofu Registry MCP Server">​</a></h3>
+<p>For those using AI assistants like Claude, Cursor, or other MCP-compatible tools, the OpenTofu Registry MCP server provides direct access to provider and module documentation. This enables your AI coding assistant to read the latest OpenTofu registry docs and generate accurate, up-to-date infrastructure code with proper resource configurations and best practices. You can use our hosted service at <a href="https://mcp.opentofu.org/mcp" rel="noopener noreferrer" target="_blank">https://mcp.opentofu.org/mcp</a> or run it locally for complete control.</p>
+<p><strong><a href="https://github.com/opentofu/opentofu-mcp-server#opentofu-mcp-server" rel="noopener noreferrer" target="_blank">Learn more about the MCP server</a></strong></p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get-started-today">Get Started Today<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#get-started-today" title="Direct link to Get Started Today">​</a></h2>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="download-and-install">Download and Install<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#download-and-install" title="Direct link to Download and Install">​</a></h3>
+<p>Getting started with OpenTofu 1.10.0 is easy. You can download it directly from our GitHub releases page, install it via your favorite package manager, or use our official Docker images. We support all major platforms including Linux, macOS, and Windows.</p>
+<p><strong><a href="https://opentofu.org/docs/intro/install/">View our installation guides</a></strong></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="join-the-community">Join the Community<a class="hash-link" href="https://opentofu.org/blog/opentofu-1-10-0#join-the-community" title="Direct link to Join the Community">​</a></h3>
+<p>OpenTofu's success is built on our vibrant community. Join thousands of practitioners sharing knowledge, contributing code, and shaping the future of open-source infrastructure as code. Whether you have questions, want to contribute, or just want to stay updated, there's a place for you.</p>
+<p><strong><a href="https://opentofu.org/slack" rel="noopener noreferrer" target="_blank">Join us on Slack</a></strong></p>
