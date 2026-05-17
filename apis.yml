@@ -45,7 +45,7 @@ apis:
         url: https://opentofu.org/docs/
       - type: Reference
         url: https://opentofu.org/docs/cli/commands/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://opentofu.org/docs/intro/install/
       - type: GitHubRepository
         url: https://github.com/opentofu/opentofu
@@ -60,7 +60,7 @@ common:
     description: OpenTofu CLI, configuration, and provider documentation.
   - url: https://opentofu.org/docs/intro/install/
     name: Getting Started
-    type: Getting Started
+    type: GettingStarted
     description: Installation guide and getting started tutorial for OpenTofu.
   - url: https://github.com/opentofu/opentofu
     name: GitHub Repository
@@ -68,7 +68,7 @@ common:
     description: Source code for the OpenTofu CLI.
   - url: https://github.com/opentofu
     name: GitHub Organization
-    type: GitHub Organization
+    type: GitHubOrganization
     description: OpenTofu GitHub organization with related projects and tooling.
   - url: https://opentofu.org/blog/
     name: Blog
@@ -80,7 +80,7 @@ common:
     description: OpenTofu community resources, Slack, and working groups.
   - url: https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md
     name: Change Log
-    type: Change Log
+    type: ChangeLog
     description: Changelog for the OpenTofu CLI releases.
   - url: https://github.com/opentofu/opentofu/security/policy
     name: Security
