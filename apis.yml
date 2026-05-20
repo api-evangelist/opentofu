@@ -50,6 +50,8 @@ apis:
       - type: GitHubRepository
         url: https://github.com/opentofu/opentofu
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/opentofuorg
   - url: https://opentofu.org/
     name: OpenTofu
     type: Website
