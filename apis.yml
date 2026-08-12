@@ -62,6 +62,9 @@ apis:
       - type: GitHubRepository
         url: https://github.com/opentofu/opentofu
 common:
+  - type: License
+    name: MPL-2.0
+    url: https://github.com/opentofu/opentofu/blob/main/LICENSE
   - type: DomainSecurity
     url: security/opentofu-domain-security.yml
   - type: LinkedIn
