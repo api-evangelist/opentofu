@@ -24,6 +24,11 @@ tags:
   - Cloud
   - DevOps
   - Infrastructure as Code
+  - Open-Source
+tags_raw:
+  - Cloud
+  - DevOps
+  - Infrastructure as Code
   - Open Source
 created: '2025-01-01'
 modified: '2026-05-19'
@@ -45,6 +50,14 @@ apis:
       the CLI, configuration files, and provider/backend plugin protocols.
     humanURL: https://opentofu.org/
     tags:
+      - CLI
+      - Cloud
+      - DevOps
+      - HCL
+      - Infrastructure as Code
+      - Open-Source
+      - Terraform
+    tags_raw:
       - CLI
       - Cloud
       - DevOps
