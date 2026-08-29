@@ -5,6 +5,18 @@ description: >-
   a community-driven alternative for provisioning and managing cloud
   infrastructure using declarative configuration files.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MPL-2.0
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -75,6 +87,16 @@ apis:
       - type: GitHubRepository
         url: https://github.com/opentofu/opentofu
 common:
+  - type: IssueTracker
+    url: https://github.com/opentofu/opentofu/issues
+  - type: Releases
+    url: https://github.com/opentofu/opentofu/releases
+  - type: SecurityPolicy
+    url: https://github.com/opentofu/opentofu/blob/main/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/opentofu/opentofu/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md
   - type: License
     name: MPL-2.0
     url: https://github.com/opentofu/opentofu/blob/main/LICENSE
