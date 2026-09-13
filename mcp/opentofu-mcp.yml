@@ -1,0 +1,33 @@
+generated: '2026-09-11'
+method: probed
+source: https://github.com/opentofu/opentofu-mcp-server
+status: published
+server:
+  name: opentofu
+  transport: http
+  url: https://mcp.opentofu.org/mcp
+deployment:
+  mode: remote
+  endpoint: https://mcp.opentofu.org/mcp
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: ptr_only reconciliation 2026-09-11 (apis.yml pointed here, no manifest existed)
+tools_count: 7
+tools:
+- name: search-opentofu-registry
+  description: ''
+- name: get-provider-details
+  description: ''
+- name: get-provider-versions
+  description: ''
+- name: get-module-details
+  description: ''
+- name: get-module-versions
+  description: ''
+- name: get-resource-docs
+  description: ''
+- name: get-datasource-docs
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-11 (signals/audit_mcp_authorship.py --probe)
+authorship: provider
