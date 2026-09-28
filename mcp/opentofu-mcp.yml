@@ -16,18 +16,27 @@ deployment:
 tools_count: 7
 tools:
 - name: search-opentofu-registry
-  description: ''
+  description: Search the OpenTofu Registry to find providers, modules, resources, and data sources. Use
+    simple terms without prefixes like 'terraform-provider-' or 'terraform-module-'.
 - name: get-provider-details
-  description: ''
+  description: Get detailed information about a specific OpenTofu provider by namespace and name. Do NOT
+    include 'terraform-provider-' prefix in the name.
 - name: get-provider-versions
-  description: ''
+  description: Get the list of available versions for a specific OpenTofu provider by namespace and name,
+    without fetching full provider documentation. Do NOT include 'terraform-provider-' prefix in the name.
 - name: get-module-details
-  description: ''
+  description: Get detailed information about a specific OpenTofu module by namespace, name, and target.
+    Use the simple module name, NOT the full repository name.
 - name: get-module-versions
-  description: ''
+  description: Get the list of available versions for a specific OpenTofu module by namespace, name, and
+    target. Use the simple module name, NOT the full repository name.
 - name: get-resource-docs
-  description: ''
+  description: Get detailed documentation for a specific OpenTofu resource by provider namespace, provider
+    name, and resource name.
 - name: get-datasource-docs
-  description: ''
+  description: Get detailed documentation for a specific OpenTofu data source by provider namespace, provider
+    name, and data source name.
 tools_source: live tools/list via initialize handshake, 2026-09-11 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
