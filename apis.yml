@@ -36,12 +36,13 @@ tags:
   - Cloud
   - DevOps
   - Infrastructure as Code
-  - Open-Source
+  - Open Source
 tags_raw:
   - Cloud
   - DevOps
   - Infrastructure as Code
   - Open Source
+  - Open-Source
 created: '2025-01-01'
 modified: '2026-05-19'
 url: >-
@@ -67,7 +68,7 @@ apis:
       - DevOps
       - HCL
       - Infrastructure as Code
-      - Open-Source
+      - Open Source
       - Terraform
     tags_raw:
       - CLI
@@ -77,6 +78,7 @@ apis:
       - Infrastructure as Code
       - Open Source
       - Terraform
+      - Open-Source
     properties:
       - type: Documentation
         url: https://opentofu.org/docs/
