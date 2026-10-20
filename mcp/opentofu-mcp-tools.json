@@ -1,0 +1,338 @@
+{
+  "endpoint": "https://mcp.opentofu.org/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "@opentofu/opentofu-mcp-server",
+    "version": "1.0.1"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "search-opentofu-registry",
+        "description": "Search the OpenTofu Registry to find providers, modules, resources, and data sources. Use simple terms without prefixes like 'terraform-provider-' or 'terraform-module-'.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Search query for finding OpenTofu components (e.g., 'aws', 'kubernetes', 'database', 's3')"
+            },
+            "type": {
+              "default": "all",
+              "description": "Type of registry items to search for",
+              "type": "string",
+              "enum": [
+                "provider",
+                "module",
+                "resource",
+                "data-source",
+                "all"
+              ]
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "get-provider-details",
+        "description": "Get detailed information about a specific OpenTofu provider by namespace and name. Do NOT include 'terraform-provider-' prefix in the name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider namespace (e.g., 'hashicorp', 'opentofu')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider name WITHOUT 'terraform-provider-' prefix (e.g., 'aws', 'kubernetes', 'azurerm')"
+            }
+          },
+          "required": [
+            "namespace",
+            "name"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "get-provider-versions",
+        "description": "Get the list of available versions for a specific OpenTofu provider by namespace and name, without fetching full provider documentation. Do NOT include 'terraform-provider-' prefix in the name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider namespace (e.g., 'hashicorp', 'opentofu')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider name WITHOUT 'terraform-provider-' prefix (e.g., 'aws', 'kubernetes', 'azurerm')"
+            }
+          },
+          "required": [
+            "namespace",
+            "name"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "description": "Provider namespace"
+            },
+            "name": {
+              "type": "string",
+              "description": "Provider name"
+            },
+            "latest": {
+              "description": "The latest version id, e.g. 'v4.0.0'",
+              "type": "string"
+            },
+            "versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Version id, e.g. 'v4.0.0'"
+                  },
+                  "published": {
+                    "type": "string",
+                    "description": "ISO 8601 date-time the version was published"
+                  }
+                },
+                "required": [
+                  "id",
+                  "published"
+                ],
+                "additionalProperties": false
+              },
+              "description": "All available versions, sorted newest-first"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "versions"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "get-module-details",
+        "description": "Get detailed information about a specific OpenTofu module by namespace, name, and target. Use the simple module name, NOT the full repository name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Module namespace without prefix (e.g., 'terraform-aws-modules')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Simple module name WITHOUT 'terraform-aws-' or similar prefix (e.g., 'vpc', 's3-bucket')"
+            },
+            "target": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Module target platform (e.g., 'aws', 'kubernetes', 'azurerm')"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "target"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "get-module-versions",
+        "description": "Get the list of available versions for a specific OpenTofu module by namespace, name, and target. Use the simple module name, NOT the full repository name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Module namespace without prefix (e.g., 'terraform-aws-modules')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Simple module name WITHOUT 'terraform-aws-' or similar prefix (e.g., 'vpc', 's3-bucket')"
+            },
+            "target": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Module target platform (e.g., 'aws', 'kubernetes', 'azurerm')"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "target"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        },
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "description": "Module namespace"
+            },
+            "name": {
+              "type": "string",
+              "description": "Module name"
+            },
+            "target": {
+              "type": "string",
+              "description": "Module target platform"
+            },
+            "latest": {
+              "description": "The latest version id, e.g. '4.0.0'",
+              "type": "string"
+            },
+            "versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Version id, e.g. '4.0.0'"
+                  },
+                  "published": {
+                    "type": "string",
+                    "description": "ISO 8601 date-time the version was published"
+                  }
+                },
+                "required": [
+                  "id",
+                  "published"
+                ],
+                "additionalProperties": false
+              },
+              "description": "All available versions, sorted newest-first"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "target",
+            "versions"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "get-resource-docs",
+        "description": "Get detailed documentation for a specific OpenTofu resource by provider namespace, provider name, and resource name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider namespace (e.g., 'hashicorp', 'opentofu')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider name WITHOUT 'terraform-provider-' prefix (e.g., 'aws', 'kubernetes')"
+            },
+            "resource": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Resource name WITHOUT provider prefix (e.g., 's3_bucket', 'instance')"
+            },
+            "version": {
+              "description": "Provider version (e.g., 'v4.0.0'). If not specified, latest version will be used",
+              "type": "string"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "resource"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "get-datasource-docs",
+        "description": "Get detailed documentation for a specific OpenTofu data source by provider namespace, provider name, and data source name.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "namespace": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider namespace (e.g., 'hashicorp', 'opentofu')"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Provider name WITHOUT 'terraform-provider-' prefix (e.g., 'aws', 'kubernetes')"
+            },
+            "dataSource": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Data source name WITHOUT provider prefix (e.g., 'ami', 'vpc')"
+            },
+            "version": {
+              "description": "Provider version (e.g., 'v4.0.0'). If not specified, latest version will be used",
+              "type": "string"
+            }
+          },
+          "required": [
+            "namespace",
+            "name",
+            "dataSource"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      }
+    ]
+  }
+}
