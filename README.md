@@ -1,4 +1,4 @@
-# OpenTofu (opentofu)
+# OpenTofu
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,56 +66,114 @@
 
 Open-source infrastructure as code tool forked from Terraform, providing a community-driven alternative for provisioning and managing cloud infrastructure using declarative configuration files.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/opentofu/refs/heads/main/apis.yml)
+**Areas:** Cloud · DevOps · Infrastructure as Code · Open Source
 
-## Scope
+## OpenTofu on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for OpenTofu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opentofu/](https://apis.io/providers/opentofu/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (1)
 
- - Cloud, DevOps, Infrastructure as Code, Open Source
+- [OpenTofu CLI](https://apis.io/apis/opentofu/opentofu-cli/) — OpenTofu is a CLI-driven infrastructure-as-code tool forked from Terraform. The opentofu binary reads HashiCorp Configuration Language (HCL) configuration,…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (2)
 
-### OpenTofu CLI
-OpenTofu is a CLI-driven infrastructure-as-code tool forked from Terraform. The opentofu binary reads HashiCorp Configuration Language (HCL) configuration, plans changes, and applies them against cloud providers through their respective APIs. It supports state management via local files or pluggable remote state backends, encrypted state and plan files, provider plugin distribution through registries, and a module ecosystem for composable infrastructure. OpenTofu does not itself expose an HTTP API; programmatic interaction happens through the CLI, configuration files, and provider/backend plugin protocols.
+Model Context Protocol servers that expose the API to agents.
 
-**Human URL:** [https://opentofu.org/](https://opentofu.org/)
+- [MCP Server](https://apis.io/servers/opentofu/mcp-server/)
+- [opentofu](https://apis.io/servers/opentofu/opentofu/)
 
-#### Tags:
+#### Security (1)
 
- - CLI, Cloud, DevOps, HCL, Infrastructure as Code, Open Source, Terraform
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Opentofu Domain Security](https://apis.io/security/opentofu/opentofu-domain-security/)
 
-- [Documentation](https://opentofu.org/docs/)
-- [Reference](https://opentofu.org/docs/cli/commands/)
-- [Getting Started](https://opentofu.org/docs/intro/install/)
-- [GitHubRepository](https://github.com/opentofu/opentofu)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Opentofu Plans Pricing](https://apis.io/plans/opentofu/opentofu-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Opentofu Rate Limits](https://apis.io/rate-limits/opentofu/opentofu-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Opentofu Finops](https://apis.io/finops/opentofu/opentofu-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://opentofu.org/)
 - [Documentation](https://opentofu.org/docs/)
-- [Getting Started](https://opentofu.org/docs/intro/install/)
-- [GitHubRepository](https://github.com/opentofu/opentofu)
-- [GitHub Organization](https://github.com/opentofu)
+- [Getting started](https://opentofu.org/docs/intro/install/)
+- [Changelog](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md)
 - [Blog](https://opentofu.org/blog/)
-- [Community](https://opentofu.org/community/)
-- [Change Log](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md)
 - [Security](https://github.com/opentofu/opentofu/security/policy)
-- [Downloads](https://opentofu.org/docs/intro/install/)
+- [GitHub](https://github.com/opentofu)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 25.0** — emerging · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 43.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 9.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opentofu/](https://apis.io/providers/opentofu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenTofu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opentofu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
